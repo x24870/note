@@ -1,5 +1,8 @@
 import time
 '''
+# If we want to log the logging info when calling foo() and bar(), 
+# add logging code snippet in both function is redundant    
+
 def foo():
     print('print from foo')
     with open('log.txt', 'a') as f:
@@ -19,6 +22,9 @@ bar()
 '''
 ######################################################
 '''
+# So we create log(), let funtion transfer to log() as a variable.
+# But we have to call log() everytime
+
 def log(func):
     with open('log.txt', 'a') as f:
         local_time = time.asctime(time.localtime(time.time()))
@@ -37,6 +43,9 @@ log(bar)
 '''
 ######################################################
 '''
+# Change log(), it will return foo() with log funtion
+# Use the returned function has the original features but also logging feature
+
 def log(func):
     def wrapper():
         with open('log.txt', 'a') as f:
@@ -57,6 +66,9 @@ foo()
 foo()
 '''
 ######################################################
+# @ is python decorator syntactic sugar
+# Add decorator before the define of the function
+
 '''
 def log(func):
     def wrapper():
@@ -78,6 +90,8 @@ foo()
 foo()
 '''
 ######################################################
+# Decorator with *args
+
 '''
 def log(func):
     def wrapper(*args):
@@ -102,6 +116,8 @@ foo('hello')
 bar('hello', 'decorator')
 '''
 ######################################################
+# Decorator with *args and **kwargs
+
 '''
 def log(func):
     def wrapper(*args, **kwargs):
@@ -127,6 +143,7 @@ foo('hello')
 bar(par1='hello', par2='decorator')
 '''
 ######################################################
+# Class decorator
 
 class log():
     def __init__(self, func):
