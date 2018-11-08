@@ -1,0 +1,18 @@
+<function foo at 0x000002B231C400D0> [local time] Thu Oct  4 17:11:30 2018, parameter: hello
+keyword parameter: {}
+
+<function bar at 0x000002B231C401E0> [local time] Thu Oct  4 17:11:30 2018, parameter: 
+keyword parameter: {'par1': 'hello', 'par2': 'decorator'}
+
+<function foo at 0x00000160597600D0> [local time] Thu Oct  4 17:12:04 2018, parameter: hello
+keyword parameter: {}
+
+<function bar at 0x00000160597601E0> [local time] Thu Oct  4 17:12:04 2018, parameter: 
+keyword parameter: {'par1': 'hello', 'par2': 'decorator'}
+
+<function foo at 0x0000020291F31E18> [local time] Thu Oct  4 17:50:16 2018, parameter: hello
+keyword parameter: {}
+
+<function bar at 0x0000020293C10268> [local time] Thu Oct  4 17:50:16 2018, parameter: 
+keyword parameter: {'par1': 'hello', 'par2': 'decorator'}
+
